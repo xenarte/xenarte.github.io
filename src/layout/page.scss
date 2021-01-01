@@ -1,0 +1,29 @@
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  // TODO: REMOVE
+  .page-img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    padding: 0;
+    height: 250px;
+    width: 75%;
+    margin: 10px 0 0 0;
+
+    @media (max-width: 360px - 1px) {
+      padding: 20px;
+    }
+  }
+
+  .page-text {
+    max-width: 640px;
+    margin: 20px 0 !important;
+
+    @media (max-width: 360px - 1px) {
+      margin: 5px 0 !important;
+    }
+  }
+}

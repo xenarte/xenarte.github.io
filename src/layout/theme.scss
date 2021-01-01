@@ -1,0 +1,99 @@
+@import '~react-md/src/scss/react-md';
+@import './custom-styles.scss';
+
+//$md-light-theme: false;
+
+$md-primary-color: $md-grey-400;
+$md-secondary-color: $md-teal-900;
+$md-tertiary-color: $md-grey-300;
+
+h1 {
+  font-family: $custom-header-font-family;
+  // Change to $md-dark-theme-text-color if light theme is off
+  color: $md-light-theme-text-color !important;
+}
+
+.page-text > h2,
+.page-text > h3 {
+  font-family: $custom-header-font-family;
+}
+
+li {
+  margin-bottom: 1ex;
+}
+
+// ol {
+//   list-style: none;
+//   counter-reset: item;
+// }
+// ol > li {
+//   counter-increment: item;
+//   margin-bottom: 5px;
+// }
+// ol > li:before {
+//   font-family: $custom-header-font-family;
+//   font-size: 120%;
+//   margin-left: -2em;
+//   width: 2em;
+//   content: counter(item);
+//   //  background: lightblue;
+//   //  border-radius: 100%;
+//   //  color: white;
+//   //  width: 1.2em;
+//   text-align: center;
+//   display: inline-block;
+// }
+
+.main-container,
+.darker-background {
+  // background-color: $md-tertiary-color;
+  background-color: #888;
+}
+
+a:link {
+  color: $md-secondary-color;
+  text-decoration: none;
+}
+
+// .md-paper.xenarte-toolbar {
+//   color: rgb(5, 0, 22);
+//   //height: 120px !important;
+//   background-color: #f7b2d8;
+//   background: url('/logos/xenarte-mark.svg') center center no-repeat; /* fallback */
+//   background: url('/logos/xenarte-mark.svg') center center no-repeat,
+//     linear-gradient(178deg, #c3ffe6, #d8f8c4, #f8e7c7, #f8cec7, #f7b2d8); /* W3C */
+// }
+
+.md-paper.xenarte-toolbar {
+  color: rgb(5, 0, 22);
+  //height: 120px !important;
+  background-color: #fc47fc;
+  background: url('/logos/xenarte-mark.svg') center center no-repeat; /* fallback */
+  background: url('/logos/xenarte-mark.svg') center center no-repeat,
+    linear-gradient(178deg, #fc47fc, #fd8afd, #bd2fc2, #d11dd1, #b9068d); /* W3C */
+}
+
+@media screen and (max-width: #{$md-tablet-min-width}) {
+  .md-paper.xenarte-toolbar {
+    color: rgb(5, 0, 22);
+    //height: 120px !important;
+    background-color: #fc47fc;
+    background: url('/logos/xenarte-mark.svg') 80% center no-repeat; /* fallback */
+    background: url('/logos/xenarte-mark.svg') 80% center no-repeat,
+      linear-gradient(178deg, #fc47fc, #fd8afd, #bd2fc2, #d11dd1, #b9068d); /* W3C */
+  }
+}
+
+.toolbar-actions {
+  height: 100%;
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: flex-end;
+  align-items: center;
+
+  .userlinks-container {
+    @media (max-width: #{$md-tablet-min-width}) {
+      display: none;
+    }
+  }
+}
